@@ -13,7 +13,8 @@ def index(request):
     wd = WebDeveloping.objects.all()
     nw = Networking.objects.all()
     pm = Programming.objects.all()
-    
+    member = Member.objects.all()
+
     context = {
         'ai_header': ai.caption,
         'ai_letter': ai.letter,
@@ -23,5 +24,30 @@ def index(request):
         'wd': wd,
         'nw': nw,
         'pm': pm,
+        'member': member,
         }
     return render(request, 'main/index.html', context)
+
+
+def networking(request):
+    return render(request, 'main/networking.html')
+
+
+def aboutus(request):
+    return render(request, 'main/aboutus.html')
+
+
+def security(request):
+    return render(request, 'main/security.html')
+
+
+def webdev(request):
+    return render(request, 'main/webdev.html')
+
+
+def artificialintelligence(request):
+    return render(request, 'main/artificialintelligence.html')
+
+
+def programming(request):
+    return render(request, 'main/programming.html')
