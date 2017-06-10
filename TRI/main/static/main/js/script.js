@@ -14,3 +14,14 @@ $(function () {
 		}
     });
 });
+
+$(document).ready(function() {
+    $("#team").owlCarousel({
+        singleItem:true,
+        pagination:false,
+        navigation:true,
+        navigationText:["",""],
+        slideSpeed: 800,
+        paginationSpeed: 800
+    });
+});

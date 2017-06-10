@@ -65,15 +65,17 @@ body{
 }
 
 .btn-default{
-	padding: 15px;
-	font-size: 14px;
-	font-weight: bold;
+	padding		: 15px;
+	font-size	: 15px;
+	font-weight	: bold;
+	color		: #003D99;
 }
 
 .btn-default:hover{
 	background-color  	: #003D99;
 	border-color		: #003D99;
 	color				: #FFF;
+	transition: all ease-in-out 0.3s;
 }
 
 /*
@@ -418,3 +420,202 @@ body{
 	text-align    : justify;
 	text-indent   : 50px;
 }
+
+
+
+/*
+
+	Team info
+
+*/
+
+#team-slide{
+	background-color	: #000;
+	padding				: 40px;
+}
+
+#team .team-img img{
+	width   	: 250px;
+	height		: 250px;
+	margin-left : auto;
+	margin-right: auto;
+}
+
+#team .team-story{
+	margin-left		: auto;
+	margin-right	: auto;
+	width			: 60%;
+}
+
+#team .team-story p{
+
+	text-align		: justify;
+	font-size		: 15px;
+	text-indent		: 20px;
+}
+
+
+
+.owl-theme .owl-buttons div{
+    position:relative;
+    border-radius: 0;
+    background:#003D99;
+    padding: 7px 15px;
+    transition: all 0.5s ease 0s;
+}
+.owl-theme .owl-buttons .owl-prev{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    opacity:0;
+    transition: all 0.50s linear;
+}
+.owl-carousel:hover .owl-buttons .owl-prev{
+    opacity: 1;
+    left: 30px;
+}
+.owl-theme .owl-buttons .owl-next{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    opacity:0;
+    transition: all 0.50s linear;
+}
+.owl-carousel:hover .owl-buttons .owl-next{
+    opacity: 1;
+    right: 30px;
+}
+.owl-prev:before,
+.owl-next:before{
+    content: "\f053";
+    font-family: 'FontAwesome';
+    color: #fff;
+}
+.owl-next:before{
+    content: "\f054";
+}
+@media only all and (max-width: 990px) {
+    .post-slide .post-info li { margin-right: 5px; }
+    .owl-theme .owl-buttons div{ display:none; }
+}
+
+
+/* --------------------------------------------
+    Footer
+----------------------------------------------- */
+.footer {
+    background : #000000;
+    }
+
+.footer .footer-block {
+    border-right : 1px solid #3a3a3a;
+    padding      : 80px 60px;
+    min-height   : 500px;
+    }
+
+@media (min-width : 992px) and (max-width : 1199px) {
+    .footer .footer-block {
+        padding : 60px 50px;
+        }
+    }
+
+@media (min-width : 768px) and (max-width : 991px) {
+    .footer .footer-block {
+        padding : 50px 15px;
+        }
+    }
+
+@media (max-width : 767px) {
+    .footer .footer-block {
+        padding    : 30px 15px;
+        min-height : inherit;
+        }
+    }
+
+.footer .footer-block.last {
+    border-right : 0;
+    }
+
+.footer .footer-widget h3 {
+    font-size     : 16px;
+    line-height   : 22px;
+    color         : #ffffff;
+    margin-bottom : 25px;
+    }
+
+.footer .widget_text {
+    }
+
+.footer .footer-logo {
+    margin-bottom : 25px;
+    }
+
+.footer .footer-widget .btn {
+    font-size     : 11px;
+    padding       : 5px 18px;
+    border-radius : 50px;
+    color         : #ccc;
+    border        : 1px solid #4a4a4a;
+    margin-top    : 40px;
+    }
+
+.footer .footer-widget .btn:hover {
+    color            : #ffffff;
+    background-color : #31aae2;
+    border           : 1px solid transparent;
+    }
+
+.footer .footer-widget address {
+    line-height   : 22px;
+    margin-bottom : 30px;
+    }
+
+.footer .footer-widget .social-links {
+    }
+
+.footer .footer-widget .social-links li a {
+    display          : block;
+    font-size        : 20px;
+    width            : 42px;
+    height           : 42px;
+    color            : #ccc;
+    background-color : #4a4a4a;
+    line-height      : 42px;
+    text-align       : center;
+    border-radius    : 50%;
+    }
+
+.footer .footer-widget .social-links li a:hover {
+    color            : #ffffff;
+    background-color : #31aae2;
+    }
+
+.footer .copyright-section {
+    background-color : #000000;
+    color            : #6b6b6b;
+    padding          : 20px 0;
+    }
+
+.footer .copyright-section .copytext {
+    text-transform : uppercase;
+    color          : #6b6b6b;
+    font-weight    : 600;
+    }
+
+@media (min-width : 768px) {
+    .footer .copyright-section .list-inline > li {
+        padding-right : 10px;
+        padding-left  : 10px;
+        }
+    }
+
+.footer .copyright-section li a {
+    display   : block;
+    font-size : 13px;
+    color     : #6b6b6b;
+    }
+
+.footer .copyright-section li a:hover,
+.footer .copyright-section li.active a {
+    color : #ffffff;
+    }
