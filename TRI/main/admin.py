@@ -53,6 +53,7 @@ class ArtificialIntelligneceAdmin(admin.ModelAdmin):
 class ProgrammingAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Description About Our Project', {'fields':['caption', 'letter']}),
+        ('Slider Image', {'fields':['slide_image_1','slide_image_2']}),
         ('Date Information', {'fields':['pub_date']}),
     ]
     list_display = ('caption', 'pub_date', 'was_published_recently')
@@ -60,7 +61,7 @@ class ProgrammingAdmin(admin.ModelAdmin):
 
 class MemberAdmin(admin.ModelAdmin):
     fieldsets = [
-        ('Member Information', {'fields': ['name','position','biography']}),
+        ('Member Information', {'fields': ['name','position','biography','profile_image']}),
         ('Date Information', {'fields':['pub_date']}),
     ]
     list_display = ('name','position', 'pub_date', 'was_published_recently')

@@ -98,10 +98,8 @@
               <div class="row">
                   <div class="col-md-6 col-sm-6">
                       <div class="security-description">
-                        {% for is in i_s %}
-                          <h6>{{is.caption}}</h6>
-                          <p>{{is.letter}}</p>
-                        {% endfor %}
+                          <h6>{{i_s.caption}}</h6>
+                          <p>{{i_s.letter}}</p>
                         <a href="{% url 'main:security' %}" class="btn btn-default pull-right">Learn More</a>
                       </div>
                   </div>
@@ -110,13 +108,13 @@
                           <div class="carousel slide" data-ride="carousel" id="security-slide">
                               <div class="carousel-inner">
                                   <div class="item active">
-                                      <img src="{% static 'main/img/background.jpg' %}">
+                                      <img src="{{i_s.slide_image_1.url}}">
                                   </div>
                                   <div class="item">
-                                      <img src="{% static 'main/img/background.jpg' %}">
+                                      <img src="{{i_s.slide_image_2.url}}">
                                   </div>
                                   <div class="item">
-                                      <img src="{% static 'main/img/background.jpg' %}" alt="">
+                                      <img src="{{i_s.slide_image_3.url}}" alt="">
                                   </div>
                               </div>
                               <a href="#security-slide" class="left carousel-control" data-slide="prev">
@@ -139,13 +137,13 @@
                           <div class="carousel slide" data-ride="carousel" id="webdev-slide">
                               <div class="carousel-inner">
                                   <div class="item active">
-                                      <img src="{% static 'main/img/background.jpg' %}">
+                                      <img src="{{wd.slide_image_1.url}}">
                                   </div>
                                   <div class="item">
-                                      <img src="{% static 'main/img/background.jpg' %}">
+                                      <img src="{{wd.slide_image_2.url}}">
                                   </div>
                                   <div class="item">
-                                      <img src="{% static 'main/img/background.jpg' %}" alt="">
+                                      <img src="{{wd.slide_image_3.url}}" alt="">
                                   </div>
                               </div>
                               <a href="#webdev-slide" class="left carousel-control" data-slide="prev">
@@ -159,10 +157,8 @@
                   </div>
                   <div class="col-md-6 col-sm-6">
                       <div class="webdev-description">
-                          {%for w_d in wd %}
-                          <h6>{{w_d.caption}}</h6>
-                          <p>{{w_d.letter}}</p>
-                          {% endfor %}
+                          <h6>{{wd.caption}}</h6>
+                          <p>{{wd.letter}}</p>
                           <a href="{% url 'main:webdev' %}" class="btn btn-default pull-right">Learn More</a>
                       </div>
                   </div>
@@ -197,10 +193,10 @@
                                           <div class="carousel slide" data-ride="carousel" id="test-slide">
                                               <div class="carousel-inner">
                                                   <div class="item active">
-                                                      <img src="{% static 'main/img/se.jpg' %}">
+                                                      <img src="{{p_m.slide_image_1.url}}">
                                                   </div>
                                                   <div class="item">
-                                                      <img src="{% static 'main/img/background.jpg' %}">
+                                                      <img src="{{p_m.slide_image_2.url}}">
                                                   </div>
                                               </div>
                                           </div>
@@ -239,7 +235,7 @@
                   <div class="team-story">
                       <div class="row">
                           <div class="team-img">
-                              <img src="{% static 'main/img/fav.jpg' %}" alt="akm" class="img-responsive img-circle" >
+                              <img src="{{m.profile_image.url}}" alt="akm" class="img-responsive img-circle" >
                           </div>
                           <div class="team-story">
                               <h3>{{m.name}}</h3>

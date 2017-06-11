@@ -96,6 +96,8 @@ class Programming(models.Model):
     caption = models.CharField(max_length=200)
     letter = models.TextField(max_length=800)
     pub_date = models.DateTimeField('date published')
+    slide_image_1 = models.FileField(null=True, blank=True)
+    slide_image_2 = models.FileField(null=True, blank=True)
 
     def __str__(self):
         return self.caption
@@ -129,6 +131,7 @@ class Member(models.Model):
     position = models.CharField(max_length=200)
     biography = models.TextField(max_length=800)
     pub_date = models.DateTimeField('date published')
+    profile_image = models.FileField(null=True, blank=True)
 
     def __str__(self):
         return self.name
